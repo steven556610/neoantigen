@@ -8,42 +8,45 @@ dependencies:
   # -------------------------
   # Core (required)
   # -------------------------
-  - python=3.8.5
-  - pip=20.3.3
+  # Updated to Python 3.10 to support newer transformers and torch versions
+  - python=3.10
+  - pip
 
   # -------------------------
   # Core scientific stack
   # -------------------------
-  - numpy=1.19.2
-  - pandas=1.1.5
-  - scipy=1.5.2
-  - scikit-learn=0.23.2
-  - imbalanced-learn=0.8.1
+  # Removed strict version pinning to avoid conflicts with newer PyTorch
+  - numpy>=1.21,<2.0.0
+  - pandas>=1.3.0
+  - scipy
+  - scikit-learn>=1.0.0
+  - imbalanced-learn
 
   # -------------------------
   # Data I/O
   # -------------------------
-  - openpyxl=3.0.5
-  - xlrd=2.0.1
+  - openpyxl
+  - xlrd
 
   # Notebooks (required to run *.ipynb in models/)
-  - notebook=6.1.5
-  - ipykernel=5.3.4
+  - notebook
+  - ipykernel
 
   # -------------------------
   # Optional: visualization
   # -------------------------
-  - matplotlib=3.3.2
-  - seaborn=0.11.0
-  - tqdm=4.54.1
+  - matplotlib
+  - seaborn
+  - tqdm
 
   # -------------------------
   # pip packages
   # -------------------------
   - pip:
-      - torch==2.4.1
-      - torchvision==0.19.1
-      - torchaudio==2.4.1
+      - torch==2.3.1
+      - torchvision==0.18.1
+      - torchaudio==2.3.1
+      - torchtext==0.18.0
       - transformers==4.46.3
       - tokenizers==0.20.3
       - huggingface-hub==0.29.1
