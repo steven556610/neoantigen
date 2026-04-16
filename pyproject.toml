@@ -38,6 +38,11 @@ test = [
     "pytest>=7.0",
     "flake8"
 ]
+api = [
+    "fastapi",
+    "uvicorn",
+    "pydantic"
+]
 
 [tool.setuptools.packages.find]
 include = ["cnneopp*"]
